@@ -1,0 +1,190 @@
+bplist00�_WebMainResource�	
+_WebResourceData_WebResourceMIMEType_WebResourceTextEncodingName^WebResourceURL_WebResourceFrameNameOHm<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">====== GitHub======<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">{{ :tutos:github_logo.jpg?nolink&amp;200|}}</span></p>
+<p class="p1"><span class="s1">===== Présentation =====</span></p>
+<p class="p1"><span class="s1">**GitHub** (exploité sous le nom de GitHub, Inc.) est un service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions **Git**.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Un logiciel de gestion de version permet de :</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* suivre l’évolution d’un code source, pour retenir les modifications effectuées sur chaque fichier et être ainsi capable de revenir en arrière en cas de problème ;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* travailler à plusieurs, sans risquer de se marcher sur les pieds. Si deux personnes modifient un même fichier en même temps, leurs modifications doivent pouvoir être fusionnées sans perte d’information.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Installation =====</span></p>
+<p class="p1"><span class="s1">Le plus simple est de télécharger : https://git-scm.com/downloads</span></p>
+<p class="p1"><span class="s1">(Laissez les options par défaut)</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Il est nécessaire d'avoir un compte chez github et d'avoir été invité comme membre du projet: https://github.com/LE2P</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Configuration sur IntelliJ =====</span></p>
+<p class="p1"><span class="s1">Installation depuis : https://www.jetbrains.com/idea/download</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">(Il est possible d'avoir une licence "éducation" gratuite pour la version Ultimate en faisant une demande : https://www.jetbrains.com/student/).</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Au démarrage:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Dans le menu config (en bas à droite), aller su "settings"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Dans la barre de recherche, mettre "Git" et ensuite configurer les deux onglets "version Control" nommés<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* "Git" : le fichier installé précédemment</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* "GitHub" : login et mdp</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Ensuite pour importer un projet:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Faire "Check out from version control"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Choisir le projet que l'on veut importer</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Créer un projet à partir des fichiers importé</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Dans le cas d'un projet Maven, chercher le sous repertoire contenant le pom.xml</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Choisir le SDK approprié (JDK par exemple)</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Pour mettre à jour le projet après modification,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Ouvrir le menu en faisant l'une des trois options :</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Ctrl + K</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Menu "VCS", "Commit Changes"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Appuyer sur le bouton VCS avec la flèche verte vers le haut</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Puis Entrer un texte concernant la modification apporté au projet dans le champ "Commit messages" avec un message explicatif, par exemple qui comprend :</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Une première ligne résumant le **pourquoi** du patch (pas le comment)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Une description longue optionnelle permettant d’**expliciter le contexte du résumé** donné en première ligne ;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Une liste de fichier et leurs modifications.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Une ligne vide sépare les différentes parties : la première est obligatoire et la troisième est optionnelle pour les changements triviaux<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* En faisant juste un "commit", on effectue le changement uniquement sur la machine. Le "commit &amp; push" permet d'envoyer sur le serveur distant les modification.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Utilisation en ligne de commande =====</span></p>
+<p class="p1"><span class="s1">(pour les utilisateurs qui n'ont pas d'IDE dédié à cela comme par exemple MATLAB, etc.)</span></p>
+<p class="p1"><span class="s1">==== Déposer un projet existant sur GitHub ====</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Pré-requis :</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Avoir un compte GitHub personnel</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Appartenir à l'organisation "LE²P" sur GitHub (voir avec Mathieu ou Yassine)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Méthode :</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Se connecter sur le site de **GitHub**</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Créer un dépôt et choisir "**Owner**" comme étant le **LE²P** ou soi-même.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>* **Ne pas mettre de README** (si on veut déposer des fichiers qui se trouve sur notre serveur/DD)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>* Mettre en privé (= privé à l'organisation ou bien à l'individu)</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">{{ :tutos:new_repo.png?nolink |}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Une fois que le dépôt est créé sur le site GitHub, il "suffit" de suivre les informations du site :</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">{{ :tutos:first_step.png?nolink |}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Se mettre sur son serveur/disque dur (après avoir installer git en ligne de commande)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* Allez dans le répertoire voulu (par exemple ''cd /var/www/'') dans lequel se trouve les fichiers à //pusher// sur le serveur</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git init .'' : permet de dire qu'on va pusher à partir de ce répertoire et tout les sous-répertoire en dessous</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* A ce point on peut écrire un fichier ''.gitignore'' qui permettra d'exclure certains fichiers ou répertoire. Par exemple, pour exclure les deux repertoires **rep1** et **rep2** il va contenir :</span></p>
+<p class="p1"><span class="s1">&lt;code&gt;</span></p>
+<p class="p1"><span class="s1">/rep1/</span></p>
+<p class="p1"><span class="s1">/rep2/</span></p>
+<p class="p1"><span class="s1">&lt;/code&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git add -A '' : permet d'ajouter tous les fichiers existants avec l'arborescence complete à partir du répertoire en cours (à l'exception de ce qui a été mentionné dans le ''.gitignore''). Sinon on peut ajouter un fichier par un fichier avec la commande fournit dans les informations suivant la création du dépôt.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git commit -m "Mon premier commit" '' : permet de **valider** les fichiers qui ont été ajouté (ou plus tard qui seront modifié) avec un commentaire. Il est important de bien commenter par la suite (voir section suivante).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git remote add origin https://github.com/gyassine/testYassine.git '' : permet de dire que je décide de synchroniser mon git local (sur ma machine, avec mon premier commit) avec un git distant (celui de GitHub).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git push -u origin master '' :<span class="Apple-converted-space">  </span>permet de //pusher// (cad envoyer) les modifications apportés sur le site distant.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Ca y est, votre code est en ligne et synchronisé avec votre machine local !</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">==== Et ensuite ? ====</span></p>
+<p class="p1"><span class="s1">En partant du principe que nous n'avez d'IDE dédié, une fois que vous avez modifié vos fichiers, que faire ?</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Se replacer dans le même répertoire (par exemple ''cd /var/www/'')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Si besoin rajouter les nouveaux fichiers à la liste des fichiers à commiter en faisant</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git add nomfichier1 nomfichier2 '' :<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git add . '' : rajoute les nouveaux fichiers les fichiers modifiés</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* '' git add -A '' : remet tout à jour (création, suppression, modification)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* Une fois que le commit est fait, il suffit de faire un '' git push '' pour publier sur le serveur</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Un bon message de commit =====</span></p>
+<p class="p1"><span class="s1">Il est recommandé de faire régulièrement des commits, mais pas des push. Vous ne devriez faire un push qu’une fois de temps en temps (pas plus d’une fois par jour en général). Evitez de faire systématiquement un push après chaque commit. Pourquoi ? Parce que vous perdriez la facilité avec laquelle il est possible d’annuler ou modifier un commit.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">La convention avec Git est de rédiger un message de commit comme on rédige un e-mail : une ligne courte de sommaire (la seule qui s'intéresse à la question « Quoi ? »), puis une ligne vide, puis un argumentaire rédigé expliquant pourquoi le changement est bon.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Le format est donc :</span></p>
+<p class="p1"><span class="s1">&lt;code&gt;</span></p>
+<p class="p1"><span class="s1">&lt;ligne de sujet&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;un ou plusieurs paragraphe d'explications&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/code&gt;</span></p>
+<p class="p1"><span class="s1">La ligne de sujet doit rester courte (si possible moins de 50 caractères, pour que la sortie de ''git log --oneline '' tienne dans un terminal de 80 colonnes). C'est l'équivalent du sujet d'un e-mail, et c'est cette ligne qui apparaîtra dans ''gitk'' ou ''git log --oneline'' par exemple.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Il faut une ligne blanche pour séparer la ligne de sujet, sinon Git va afficher tout le premier paragraphe partout où il aurait affiché la ligne de sujet.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">La suite est une explication rédigée sur le commit. Ne pas hésiter à faire une explication longue si c'est nécessaire (typiquement plusieurs paragraphes).</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Sauf cas particulier, on préférera donc rédiger un message de commit depuis son éditeur de texte préféré (lancé par défaut par ''git commit'') à l'option ''--message'' (''-m'') de ''git commit''.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Méthode de travail =====</span></p>
+<p class="p1"><span class="s1">Lorsqu’on travaille avec Git, on suit en général toujours les étapes suivantes :</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>- modifier le code source ;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>- tester votre programme pour vérifier si cela fonctionne ;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>- faire un commit pour « enregistrer » les changements et les faire connaître à Git ;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>- recommencer à partir de l’étape 1 pour une autre modification</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">Une fois que cela est fini, on fait un push en fin de journée par exemple sur GitHub.</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">À titre indicatif, si vous travaillez toute une journée sur un code et que vous ne faites qu’un commit à la fin de la journée, c’est qu’il y a un problème (sauf si vous avez passé toute la journée sur le même bug). Les commits sont là pour « valider » l’avancement de votre projet : n’en faites pas un pour chaque ligne de code modifiée, mais n’attendez pas d’avoir fait 50 modifications différentes non plus !</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== Liens très utiles =====</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* [[https://try.github.io/levels/1/challenges/1|Apprendre GitHub en 15 min de manière interactifs (Anglais)]] (court)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* [[https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github|Gérez votre code avec Git et GitHub (Français)]] (long)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* [[https://rogerdudler.github.io/git-guide/index.fr.html|git - petit guide (Fr)]] (très court)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>* [[http://adopteungit.fr/methodologie/2016/08/16/les-bonnes-pratiques.html|Bonne pratique du Git (Fr)]] (court)</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">===== CheatSheet =====</span></p>
+<p class="p1"><span class="s1">{{ :tutos:github-git-cheat-sheet.pdf | Github/git CheatSheet.pdf}}</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;object data="http://le2p.univ-reunion.fr/le2pWiki/lib/exe/fetch.php/tutos/github-git-cheat-sheet.pdf" type="application/pdf" width=1024 height=768&gt;&lt;/object&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">{{ :tutos:gitcheatsheet.png?nolink |}}</span></p>
+<p class="p1"><span class="s1">{{ :tutos:git-transport_2.png?direct&amp;800 |}}</span></p>
+<p class="p1"><span class="s1">{{ :tutos:git-workflow.png?direct&amp;600 |}}</span></p>
+</body>
+</html>
+Ytext/htmlUutf-8_file:///index.htmlP    ( : P n } �IIII*                           I+
