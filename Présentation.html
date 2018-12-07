@@ -1,0 +1,180 @@
+Support pour présentation Git / GitHub
+Introduction
+    GIT: un outils de gestion de version (acronyme VCS en anglais) distribué.
+
+Fonctions:
+    Fournit des informations sur l’évolution d’un ou d’un ensemble de fichiers
+    Quand le(s) fichier(s) ont été modifiés
+    Qu’est ce qui a été modifié
+Par qui
+Permet à plusieurs personnes de faire évoluer un ensemble de fichiers
+ 
+
+Différence entre système de gestion de version distribué et centralisé
+
+Dans un système centralisé les utilisateurs n’ont en local  qu’une version des fichiers du projet (working copy).
+Dans un système distribué les utilisateur ont en local une copie du repository complet (toutes le versions des fichiers)Git 1
+
+Prérequis:
+Création d’un compte sur GITHUB:
+ Se connecter sur https://github.com/
+Git 2
+
+Remplir les 3 champs et cliquer sur “Sign up for GitHub”
+Git 3
+
+Cliquer sur “Continue”
+Git 4
+
+Cliquer sur “Skip this step”
+Vous deviez maintenant avoir reçu un email de confirmation d’adresse email
+Git 5
+
+Cliquer sur “Verify email address”
+La page web ci-dessous devrait s’ouvrir dans votre navigateur
+Git 6
+Ajout du nouvel utilisateur créé dans l’organisation “Les Fabriqueurs” (Pierre ou Grégoire)
+Connexion sur la page https://github.com/les-fabriqueurs
+Cliquer sur “Invite someone”
+Git 7
+
+Sélectionner l’utilisateur a ajouter
+Git 8
+
+Cliquer sur “send invitation”
+L’email ci-dessous est automatiquement envoyé a l’utilisateur
+Git 9
+
+Cliquer sur le lien   https://github.com/orgs/les-fabriqueurs/invitation?via_email=1
+Git 10
+
+Cliquer sur “Join Les fabriqueurs”
+Git 11
+
+Installation du client Git pour Windows
+Aller sur https://git-for-windows.github.io/ et cliquer sur Download
+Git 12
+
+Ou exécuter directement le fichier disponible dans le Dropbox fabriqueurs sous  “Dropbox\Fabriqueurs\Distrib\GIT”
+
+(garder les options par défaut)
+
+ 
+
+Premiers pas:
+Présentation de l’implémentation d’un workflow simple de développement pour une petite équipe
+
+Un workflow centralisé:
+
+Utilisation d’un repository central servant de point d’entré unique pour tous les changements du projet
+Ce workflow ne nécessite pas l’utilisation de branches autres que la branche principale (“master”)
+Git 13
+
+1. Initialisation d’un repository central
+Connexion sur la page de l’organisation “Les Fabriqueurs” : https://github.com/les-fabriqueurs
+Git 14
+
+Cliquer sur “New repository”
+Git 15
+
+Saisir un nom de repository puis cliquer sur “Create repository”
+ 
+
+2. Chaque utilisateur va maintenant cloner ce repository
+Créer un répertoire pour stocker cette copie locale du repository
+Lancer le programme “Git Gui” et cliquer sur “Clone Existing Repository”
+Git 16
+
+Chaque utilisateur a donc une copie locale du repository central (toutes les versions) et avec la dernière version locale identique à la dernière version centrale
+Git 193. François effectue des modifications locales de certains fichiers du projet
+Git 20
+
+ 
+
+Francois modifie/ajoute des fichiers dans son arborescence locale
+Dans UI “Git Gui” Francois clique sur “rescan” afin d’obtenir dans le cadre “Unstaged Changes” la liste des fichiers modifiés
+Git 21
+
+ 
+
+Francois clique sur “Stage Changed” afin d’inclure ces modifications dans le prochain “commit”
+Git 22
+
+ 
+
+François clique sur “Commit” afin de  créer localement une nouvelle version du projet prenant en compte ses modifications
+Git 23François clique sur “Push” afin de remonter cette nouvelle version sur le repository central (cela ouvre une autre fenêtre dans laquelle il faut de nouveau cliquer sur “Push”)
+Git 24
+
+Le repository central et celui de Francois sont maintenant de nouveau synchronisés
+Git 25
+
+4. Liliane effectue aussi des modifications locales de certains fichiers du projet
+Git 26
+
+Avant de faire ses modifications, le repository de Liliane est d’ans l’état ci-dessous.
+Git 27Après le commit des modification de Liliane (mais avant le push) nous obtenons
+Git 28
+
+Liliane va tenter de remonter ses modifications sur le repository central (Push)
+Logiquement, Git Gui renvoie le message d’erreur suivant:
+
+ 
+
+Pushing to https://github.com/les-fabriqueurs/Training-session-1
+
+To https://github.com/les-fabriqueurs/Training-session-1
+
+! [rejected]        master -> master (fetch first)
+
+error: failed to push some refs to ‘https://github.com/les-fabriqueurs/Training-session-1‘
+
+hint: Updates were rejected because the remote contains work that you do
+
+hint: not have locally. This is usually caused by another repository pushing
+
+hint: to the same ref. You may want to first integrate the remote changes
+
+hint: (e.g., ‘git pull …’) before pushing again.
+
+hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.
+
+ 
+
+Liliane doit d’abord récupérer les modifications remontées ds le repository de référence (central repository) par Francois, les integrer a ses modifications avant de tenter un nouveau ‘push’.
+ 
+
+Liliane récupère les modifications du repository central:
+Git 29
+
+Cette opération récupère localement les versions du repository central. Nous avons maitenant 2 branches qu’il va falloir fusionner…
+
+Git 30Liliane fusionne les 2 versions
+Git 31
+
+Git 32
+
+Comme dans cet exemple Liliane et Francois ont modifié le même fichier, la fusion automatique de fonctionne pas et la demande de merge retourne l’erreur:
+
+Auto-merging Documentation/Doc1.txt
+
+CONFLICT (content): Merge conflict in Documentation/Doc1.txt
+
+Automatic merge failed; fix conflicts and then commit the result.
+
+warning: old-style ‘git merge <msg> HEAD <commit>’ is deprecated.
+
+Il va falloir faire la fusion des 2 versions de fichier manuellement
+
+Edition du fichier Documentation/Doc1.txt
+Fusion manuelle des modifications (le fichier contient le contenu des 2 versions en mode “diff”)
+Commit
+Git 33
+
+Liliane peut maintenant retenter un push sur le repository central
+Git 34
+
+ 
+
+SUCCESS ! 🙂
+
