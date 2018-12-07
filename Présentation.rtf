@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====== GitHub====== \
+\{\{ :tutos:github_logo.jpg?nolink&200|\}\}\
+===== Pr\'e9sentation =====\
+**GitHub** (exploit\'e9 sous le nom de GitHub, Inc.) est un service web d'h\'e9bergement et de gestion de d\'e9veloppement de logiciels, utilisant le logiciel de gestion de versions **Git**. \
+\
+Un logiciel de gestion de version permet de :\
+  * suivre l\'92\'e9volution d\'92un code source, pour retenir les modifications effectu\'e9es sur chaque fichier et \'eatre ainsi capable de revenir en arri\'e8re en cas de probl\'e8me ;\
+\
+  * travailler \'e0 plusieurs, sans risquer de se marcher sur les pieds. Si deux personnes modifient un m\'eame fichier en m\'eame temps, leurs modifications doivent pouvoir \'eatre fusionn\'e9es sans perte d\'92information.\
+\
+===== Installation =====\
+Le plus simple est de t\'e9l\'e9charger : https://git-scm.com/downloads\
+(Laissez les options par d\'e9faut)\
+\
+Il est n\'e9cessaire d'avoir un compte chez github et d'avoir \'e9t\'e9 invit\'e9 comme membre du projet: https://github.com/LE2P\
+\
+===== Configuration sur IntelliJ =====\
+Installation depuis : https://www.jetbrains.com/idea/download\
+\
+(Il est possible d'avoir une licence "\'e9ducation" gratuite pour la version Ultimate en faisant une demande : https://www.jetbrains.com/student/).\
+\
+Au d\'e9marrage:\
+  * Dans le menu config (en bas \'e0 droite), aller su "settings"\
+  * Dans la barre de recherche, mettre "Git" et ensuite configurer les deux onglets "version Control" nomm\'e9s \
+    * "Git" : le fichier install\'e9 pr\'e9c\'e9demment\
+    * "GitHub" : login et mdp\
+\
+Ensuite pour importer un projet:\
+  * Faire "Check out from version control"\
+  * Choisir le projet que l'on veut importer\
+  * Cr\'e9er un projet \'e0 partir des fichiers import\'e9\
+    * Dans le cas d'un projet Maven, chercher le sous repertoire contenant le pom.xml\
+    * Choisir le SDK appropri\'e9 (JDK par exemple)\
+\
+\
+Pour mettre \'e0 jour le projet apr\'e8s modification, \
+\
+  * Ouvrir le menu en faisant l'une des trois options :\
+    * Ctrl + K\
+    * Menu "VCS", "Commit Changes"\
+    * Appuyer sur le bouton VCS avec la fl\'e8che verte vers le haut\
+  * Puis Entrer un texte concernant la modification apport\'e9 au projet dans le champ "Commit messages" avec un message explicatif, par exemple qui comprend :\
+    * Une premi\'e8re ligne r\'e9sumant le **pourquoi** du patch (pas le comment)\
+    * Une description longue optionnelle permettant d\'92**expliciter le contexte du r\'e9sum\'e9** donn\'e9 en premi\'e8re ligne ;\
+    * Une liste de fichier et leurs modifications.\
+    * Une ligne vide s\'e9pare les diff\'e9rentes parties : la premi\'e8re est obligatoire et la troisi\'e8me est optionnelle pour les changements triviaux \
+  * En faisant juste un "commit", on effectue le changement uniquement sur la machine. Le "commit & push" permet d'envoyer sur le serveur distant les modification. \
+\
+===== Utilisation en ligne de commande =====\
+(pour les utilisateurs qui n'ont pas d'IDE d\'e9di\'e9 \'e0 cela comme par exemple MATLAB, etc.)\
+==== D\'e9poser un projet existant sur GitHub ====\
+  * Pr\'e9-requis :\
+    * Avoir un compte GitHub personnel\
+    * Appartenir \'e0 l'organisation "LE\'b2P" sur GitHub (voir avec Mathieu ou Yassine)\
+  * M\'e9thode :\
+    * Se connecter sur le site de **GitHub**\
+    * Cr\'e9er un d\'e9p\'f4t et choisir "**Owner**" comme \'e9tant le **LE\'b2P** ou soi-m\'eame.\
+      * **Ne pas mettre de README** (si on veut d\'e9poser des fichiers qui se trouve sur notre serveur/DD)\
+      * Mettre en priv\'e9 (= priv\'e9 \'e0 l'organisation ou bien \'e0 l'individu)\
+\
+\{\{ :tutos:new_repo.png?nolink |\}\}\
+    * Une fois que le d\'e9p\'f4t est cr\'e9\'e9 sur le site GitHub, il "suffit" de suivre les informations du site :\
+\
+\{\{ :tutos:first_step.png?nolink |\}\}\
+    * Se mettre sur son serveur/disque dur (apr\'e8s avoir installer git en ligne de commande)\
+    * Allez dans le r\'e9pertoire voulu (par exemple ''cd /var/www/'') dans lequel se trouve les fichiers \'e0 //pusher// sur le serveur\
+\
+    * '' git init .'' : permet de dire qu'on va pusher \'e0 partir de ce r\'e9pertoire et tout les sous-r\'e9pertoire en dessous\
+    * A ce point on peut \'e9crire un fichier ''.gitignore'' qui permettra d'exclure certains fichiers ou r\'e9pertoire. Par exemple, pour exclure les deux repertoires **rep1** et **rep2** il va contenir :\
+<code>\
+/rep1/\
+/rep2/\
+</code> \
+    * '' git add -A '' : permet d'ajouter tous les fichiers existants avec l'arborescence complete \'e0 partir du r\'e9pertoire en cours (\'e0 l'exception de ce qui a \'e9t\'e9 mentionn\'e9 dans le ''.gitignore''). Sinon on peut ajouter un fichier par un fichier avec la commande fournit dans les informations suivant la cr\'e9ation du d\'e9p\'f4t.\
+    * '' git commit -m "Mon premier commit" '' : permet de **valider** les fichiers qui ont \'e9t\'e9 ajout\'e9 (ou plus tard qui seront modifi\'e9) avec un commentaire. Il est important de bien commenter par la suite (voir section suivante).\
+    * '' git remote add origin https://github.com/gyassine/testYassine.git '' : permet de dire que je d\'e9cide de synchroniser mon git local (sur ma machine, avec mon premier commit) avec un git distant (celui de GitHub).\
+    * '' git push -u origin master '' :  permet de //pusher// (cad envoyer) les modifications apport\'e9s sur le site distant. \
+\
+Ca y est, votre code est en ligne et synchronis\'e9 avec votre machine local !\
+\
+==== Et ensuite ? ====\
+En partant du principe que nous n'avez d'IDE d\'e9di\'e9, une fois que vous avez modifi\'e9 vos fichiers, que faire ?\
+  * Se replacer dans le m\'eame r\'e9pertoire (par exemple ''cd /var/www/'')\
+  * Si besoin rajouter les nouveaux fichiers \'e0 la liste des fichiers \'e0 commiter en faisant\
+    * '' git add nomfichier1 nomfichier2 '' : \
+    * '' git add . '' : rajoute les nouveaux fichiers les fichiers modifi\'e9s\
+    * '' git add -A '' : remet tout \'e0 jour (cr\'e9ation, suppression, modification)\
+  * Une fois que le commit est fait, il suffit de faire un '' git push '' pour publier sur le serveur\
+\
+===== Un bon message de commit =====\
+Il est recommand\'e9 de faire r\'e9guli\'e8rement des commits, mais pas des push. Vous ne devriez faire un push qu\'92une fois de temps en temps (pas plus d\'92une fois par jour en g\'e9n\'e9ral). Evitez de faire syst\'e9matiquement un push apr\'e8s chaque commit. Pourquoi ? Parce que vous perdriez la facilit\'e9 avec laquelle il est possible d\'92annuler ou modifier un commit.\
+\
+La convention avec Git est de r\'e9diger un message de commit comme on r\'e9dige un e-mail : une ligne courte de sommaire (la seule qui s'int\'e9resse \'e0 la question \'ab Quoi ? \'bb), puis une ligne vide, puis un argumentaire r\'e9dig\'e9 expliquant pourquoi le changement est bon.\
+\
+Le format est donc :\
+<code>\
+<ligne de sujet>\
+\
+<un ou plusieurs paragraphe d'explications>\
+</code>\
+La ligne de sujet doit rester courte (si possible moins de 50 caract\'e8res, pour que la sortie de ''git log --oneline '' tienne dans un terminal de 80 colonnes). C'est l'\'e9quivalent du sujet d'un e-mail, et c'est cette ligne qui appara\'eetra dans ''gitk'' ou ''git log --oneline'' par exemple.\
+\
+Il faut une ligne blanche pour s\'e9parer la ligne de sujet, sinon Git va afficher tout le premier paragraphe partout o\'f9 il aurait affich\'e9 la ligne de sujet.\
+\
+La suite est une explication r\'e9dig\'e9e sur le commit. Ne pas h\'e9siter \'e0 faire une explication longue si c'est n\'e9cessaire (typiquement plusieurs paragraphes).\
+\
+Sauf cas particulier, on pr\'e9f\'e9rera donc r\'e9diger un message de commit depuis son \'e9diteur de texte pr\'e9f\'e9r\'e9 (lanc\'e9 par d\'e9faut par ''git commit'') \'e0 l'option ''--message'' (''-m'') de ''git commit''.\
+\
+===== M\'e9thode de travail =====\
+Lorsqu\'92on travaille avec Git, on suit en g\'e9n\'e9ral toujours les \'e9tapes suivantes :\
+\
+  - modifier le code source ;\
+  - tester votre programme pour v\'e9rifier si cela fonctionne ;\
+  - faire un commit pour \'ab enregistrer \'bb les changements et les faire conna\'eetre \'e0 Git ;\
+  - recommencer \'e0 partir de l\'92\'e9tape 1 pour une autre modification\
+\
+Une fois que cela est fini, on fait un push en fin de journ\'e9e par exemple sur GitHub.\
+\
+\'c0 titre indicatif, si vous travaillez toute une journ\'e9e sur un code et que vous ne faites qu\'92un commit \'e0 la fin de la journ\'e9e, c\'92est qu\'92il y a un probl\'e8me (sauf si vous avez pass\'e9 toute la journ\'e9e sur le m\'eame bug). Les commits sont l\'e0 pour \'ab valider \'bb l\'92avancement de votre projet : n\'92en faites pas un pour chaque ligne de code modifi\'e9e, mais n\'92attendez pas d\'92avoir fait 50 modifications diff\'e9rentes non plus !\
+\
+\
+===== Liens tr\'e8s utiles =====\
+  * [[https://try.github.io/levels/1/challenges/1|Apprendre GitHub en 15 min de mani\'e8re interactifs (Anglais)]] (court)\
+  * [[https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github|G\'e9rez votre code avec Git et GitHub (Fran\'e7ais)]] (long)\
+  * [[https://rogerdudler.github.io/git-guide/index.fr.html|git - petit guide (Fr)]] (tr\'e8s court)\
+  * [[http://adopteungit.fr/methodologie/2016/08/16/les-bonnes-pratiques.html|Bonne pratique du Git (Fr)]] (court)\
+\
+===== CheatSheet =====\
+\{\{ :tutos:github-git-cheat-sheet.pdf | Github/git CheatSheet.pdf\}\}\
+\
+\
+<html>\
+<object data="http://le2p.univ-reunion.fr/le2pWiki/lib/exe/fetch.php/tutos/github-git-cheat-sheet.pdf" type="application/pdf" width=1024 height=768></object>\
+</html>\
+\
+\{\{ :tutos:gitcheatsheet.png?nolink |\}\}\
+\{\{ :tutos:git-transport_2.png?direct&800 |\}\}\
+\{\{ :tutos:git-workflow.png?direct&600 |\}\}\
+}
