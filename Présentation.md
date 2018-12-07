@@ -1,12 +1,14 @@
 ====== GitHub====== 
-{{ :tutos:github_logo.jpg?nolink&200|}}
+
 ===== Présentation =====
 **GitHub** (exploité sous le nom de GitHub, Inc.) est un service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions **Git**. 
 
 Un logiciel de gestion de version permet de :
-  * suivre l’évolution d’un code source, pour retenir les modifications effectuées sur chaque fichier et être ainsi capable de revenir en arrière en cas de problème ;
+  * suivre l’évolution d’un code source, pour retenir les modifications effectuées sur chaque 
+  fichier et être ainsi capable de revenir en arrière en cas de problème ;
 
-  * travailler à plusieurs, sans risquer de se marcher sur les pieds. Si deux personnes modifient un même fichier en même temps, leurs modifications doivent pouvoir être fusionnées sans perte d’information.
+  * travailler à plusieurs, sans risquer de se marcher sur les pieds. Si deux personnes modifient 
+  un même fichier en même temps, leurs modifications doivent pouvoir être fusionnées sans perte d’information.
 
 ===== Installation =====
 Le plus simple est de télécharger : https://git-scm.com/downloads
@@ -39,6 +41,7 @@ Pour mettre à jour le projet après modification,
     * Ctrl + K
     * Menu "VCS", "Commit Changes"
     * Appuyer sur le bouton VCS avec la flèche verte vers le haut
+    
   * Puis Entrer un texte concernant la modification apporté au projet dans le champ "Commit messages" avec un message explicatif, par exemple qui comprend :
     * Une première ligne résumant le **pourquoi** du patch (pas le comment)
     * Une description longue optionnelle permettant d’**expliciter le contexte du résumé** donné en première ligne ;
