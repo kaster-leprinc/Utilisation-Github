@@ -1,6 +1,6 @@
-======****** GitHub ******====== 
+====== ****** GitHub ****** ====== 
 
-=====**** Présentation ****=====
+===== **** Présentation **** =====
 
 **GitHub** (exploité sous le nom de GitHub, Inc.) est un service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions **Git**. 
 
